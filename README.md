@@ -14,11 +14,11 @@ Factor Compass 是一个轻量、可运行、便于扩展的因子投资月度�
 
 Logo and application screenshots:
 
-![Factor Compass app overview](assets/screenshots/image.png)
+![Factor Compass app overview](assets/screenshots/image1.png)
 
 | 回测图表 | 调仓与持仓明细 |
 | --- | --- |
-| ![Backtest charts](assets/screenshots/image1.png) | ![Rebalance details](assets/screenshots/image2.png) |
+| ![Backtest charts](assets/screenshots/image2.png) | ![Rebalance details](assets/screenshots/image.png) |
 
 The screenshots show the Streamlit interface, factor selection workflow, performance metrics, Plotly charts, and rebalance records.
 
