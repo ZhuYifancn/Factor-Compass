@@ -1,0 +1,13 @@
+<svg width="960" height="320" viewBox="0 0 960 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="320" rx="36" fill="#0F172A"/>
+  <circle cx="168" cy="160" r="88" fill="#111827" stroke="#38BDF8" stroke-width="10"/>
+  <circle cx="168" cy="160" r="58" fill="#0F172A" stroke="#64748B" stroke-width="4"/>
+  <path d="M203 96L181 178L101 224L123 142L203 96Z" fill="#38BDF8"/>
+  <path d="M133 219L155 137L235 91L213 173L133 219Z" fill="#F8FAFC" fill-opacity="0.92"/>
+  <circle cx="168" cy="160" r="9" fill="#FACC15"/>
+  <path d="M312 122H568" stroke="#38BDF8" stroke-width="8" stroke-linecap="round"/>
+  <path d="M312 168H676" stroke="#F8FAFC" stroke-width="8" stroke-linecap="round"/>
+  <path d="M312 214H520" stroke="#94A3B8" stroke-width="8" stroke-linecap="round"/>
+  <text x="312" y="92" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="700">Factor Compass</text>
+  <text x="312" y="270" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="28">Monthly factor backtesting demo</text>
+</svg>

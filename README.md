@@ -1,10 +1,26 @@
 # Factor Compass | 因子罗盘
 
+<p align="center">
+  <img src="assets/logo.svg" alt="Factor Compass logo" width="720">
+</p>
+
 Factor Compass 是一个轻量、可运行、便于扩展的因子投资月度调仓回测系统。项目使用 Python、Streamlit、Pandas、NumPy 和 Plotly 构建，适合用于量化投资教学、因子研究演示、策略原型验证，以及后续扩展为 Web 回测平台。
 
 系统支持上传股票行情 CSV，并根据数据字段自动判断可用因子。只提供 `stock_code,date,close` 也能运行；如果数据包含 `open,high,low,volume,amount`，系统会自动启用更多 OHLCV 相关因子。
 
 > 本项目仅用于教学、研究和技术演示，不构成任何投资建议。
+
+## Preview
+
+Logo and application screenshots:
+
+![Factor Compass app overview](assets/screenshots/image.png)
+
+| 回测图表 | 调仓与持仓明细 |
+| --- | --- |
+| ![Backtest charts](assets/screenshots/image1.png) | ![Rebalance details](assets/screenshots/image2.png) |
+
+The screenshots show the Streamlit interface, factor selection workflow, performance metrics, Plotly charts, and rebalance records.
 
 ## Highlights
 

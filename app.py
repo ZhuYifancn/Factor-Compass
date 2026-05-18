@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import base64
 from pathlib import Path
 
 import pandas as pd
@@ -15,10 +16,80 @@ from src.utils import format_float, format_pct
 
 BASE_DIR = Path(__file__).resolve().parent
 DEFAULT_DATA_PATH = BASE_DIR / "data" / "default_prices.csv"
+LOGO_PATH = BASE_DIR / "assets" / "logo.svg"
 
 
 st.set_page_config(page_title="因子投资月度调仓回测系统", layout="wide")
-st.title("因子投资月度调仓回测系统")
+
+
+def render_header() -> None:
+    if LOGO_PATH.exists():
+        logo_data = base64.b64encode(LOGO_PATH.read_bytes()).decode("utf-8")
+        st.markdown(
+            f"""
+            <style>
+              .fc-header {{
+                display: flex;
+                align-items: center;
+                gap: 14px;
+                margin-bottom: 12px;
+                flex-wrap: nowrap;
+              }}
+              .fc-logo {{
+                width: 328px;
+                min-width: 328px;
+                line-height: 0;
+              }}
+              .fc-logo img {{
+                width: 100% !important;
+                height: auto !important;
+                display: block;
+              }}
+              .fc-title {{
+                min-width: 0;
+              }}
+              .fc-title h1 {{
+                margin: 0;
+                font-size: 2.25rem;
+                line-height: 1.15;
+              }}
+              .fc-title p {{
+                margin: 6px 0 0;
+                color: #64748b;
+                font-size: 1rem;
+              }}
+              @media (max-width: 640px) {{
+                .fc-header {{
+                  align-items: flex-start;
+                  gap: 10px;
+                }}
+                .fc-logo {{
+                  width: 164px;
+                  min-width: 164px;
+                }}
+                .fc-title h1 {{
+                  font-size: 1.5rem;
+                }}
+              }}
+            </style>
+            <div class="fc-header">
+              <div class="fc-logo">
+                <img src="data:image/svg+xml;base64,{logo_data}" alt="Factor Compass logo">
+              </div>
+              <div class="fc-title">
+                <h1>| 因子罗盘</h1>
+                <p>因子投资月度调仓回测系统</p>
+              </div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+    else:
+        st.title("| 因子罗盘")
+        st.caption("因子投资月度调仓回测系统")
+
+
+render_header()
 
 
 @st.cache_data(show_spinner=False)
